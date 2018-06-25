@@ -1,4 +1,10 @@
-from AndroidSpider import url_manager, html_downloader, html_parser, html_output
+'''#html中需加入这一句中文才不会乱码“<math http-equiv="Content-Type content="text/html; charset=utf-8" />"
+SpiderMain 爬虫中的调度器，面向对象写法，调度器负责从 urlmanager 获取爬取链接，
+然后交给 HtmlDownLoader 下载，然后把下载内容交给 HtmlParser 解析，然后把有价值的数据输出给
+HtmlOutput 进行应用。
+'''
+#from AndroidSpider
+import url_manager, html_downloader, html_parser, html_output
 
 '''
 爬取百度百科 Android 关键词相关词及简介并输出为一个HTML tab网页
@@ -27,6 +33,7 @@ class SpiderMain(object):
                 new_urls, new_data = self.parser.parse(new_url, html_content, "utf-8")
                 self.urls.add_new_urls(new_urls)
                 self.out_put.collect_data(new_data)
+                #默认爬取深度 30，不然太慢，自己可以修改。
                 if count >= 30:
                     break
                 count = count + 1
