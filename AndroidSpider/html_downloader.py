@@ -1,3 +1,8 @@
+'''
+HtmlDownLoader.py 爬虫留中的【下载器】
+负责对指定的 URL 网页内容进行下载获取，这里只是简单处理了 HTTP CODE 200,实质应该依据 400，500
+等分情况进行重试等机制处理。
+'''
 from http import cookiejar
 from urllib import request, error
 from urllib.parse import urlparse

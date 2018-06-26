@@ -1,3 +1,7 @@
+'''
+html_output.py 爬虫流中的【应用器】
+负责对解析后的数据应用，这里单用一个 WEB 页面把爬取的所有存在 datas l列表的数据以 table 输出。
+'''
 import time
 
 

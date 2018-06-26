@@ -1,3 +1,7 @@
+'''
+url_manager.py 爬虫流中的【url 管理器】
+负责管理升读 URL 链接和去重等机制。
+'''
 class UrlManager(object):
     def __init__(self):
         self.new_urls = set()

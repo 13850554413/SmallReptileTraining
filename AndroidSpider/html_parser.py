@@ -1,3 +1,8 @@
+'''
+html_parser.py 爬虫流中的【解析器】
+负责对下载器下载下来的网页内容进行解析，解析规则就是我们自己定义的感兴趣的内容，
+这里我们只分析网页后解析出 url /title /content,其他的不关心，解析好的数据通过字典返回。
+'''
 import re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
